@@ -1,0 +1,124 @@
+/* General */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("./assets/fonts/Vazirmatn[wght].woff2")
+      format("woff2 supports variations"),
+    url("./assets/fonts/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #161819;
+  --secondry-background: #474950;
+  --loading-background: #828282;
+
+  --text: #ffffff;
+  --secondry-text: #b6b6b6;
+  --warning: #ad9100;
+  --error: #cc0300;
+
+  --color0: "#5882bc";
+  --color1: "#0fbcf6";
+  --color2: "#a25629";
+  --color3: "#b57877";
+  --color4: "#fa833f";
+}
+
+/* Containers */
+html {
+  height: 100vh;
+}
+body {
+  /* background-color: var(--background); */
+  background: rgb(10, 98, 128);
+  background: radial-gradient(
+    circle,
+    rgb(4, 40, 52) 0%,
+    rgba(22, 24, 25, 1) 80%,
+    rgba(22, 24, 25, 1) 100%
+  );
+
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Texts */
+p {
+  color: var(--text);
+  font-family: "Vazirmatn";
+  font-weight: 400;
+
+  margin: 0px;
+  padding-top: 2.5px;
+}
+
+.title-text {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: var(--secondry-background);
+}
+
+/* Sidebar */
+.site-header {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.header-texts-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-center-div {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.header-center,
+.header-right {
+  /* background-color: var(--secondry-background); */
+  border-radius: 7.5px;
+
+  width: fit-content;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header-center p,
+.header-right p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-center a,
+.header-right p {
+  border-radius: 5px;
+  padding: 5px;
+
+  transition: 0.15s;
+}
+
+.header-center a:hover {
+  background-color: var(--secondry-background);
+  cursor: pointer;
+}
+
+.header-right a:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .site-header,
+  .header-texts-container {
+    flex-direction: column;
+  }
+}
